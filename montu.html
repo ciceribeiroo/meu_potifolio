@@ -1,0 +1,162 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="estilos.css" media="screen" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello world!</title>
+  </head>
+<body>
+
+<progress value="0" id="progressBar">
+  <div class="progress-container">
+     <div class="progress-bar" id="myBar"></div>
+  </div>
+</progress>
+
+<div class="fundo">
+    <h1 id="title-1" style="color: transparent; font-size: 7.5em;"> alice ribeiro</h1>
+    <h1 id="title-2" style="color: transparent; font-size: 7.5em;"> alice ribeiro</h1>
+    <h1 id="title-3" style="color: transparent; font-size: 7.5em;"> alice ribeiro</h1>
+    <div class="imagem">
+        <img src="baixo.svg" width="40">
+    </div>
+</div>
+<script>
+let timeInterval = 3;
+let currentTime = 0;
+
+setInterval(function(){
+    let t1 = document.getElementById('title-1');
+    let t2 = document.getElementById('title-2');
+    let t3 = document.getElementById('title-3');
+
+
+
+    if(currentTime ==0){
+        currentTime++;
+        t1.setAttribute('style', 'color: transparent; -webkit-text-stroke-width: 3.4px; -webkit-text-stroke-color: #8e0202; font-size:7.5em');
+        t1.style.color = "transparent";
+        t2.setAttribute('style', 'color: transparent; -webkit-text-stroke-width: 3.4px; -webkit-text-stroke-color: #8e0202; font-size:7.5em');
+        t2.style.color = "transparent";
+        t3.setAttribute('style','color: transparent; -webkit-text-stroke-width: 3.4px; -webkit-text-stroke-color: #8e0202; font-size:7.5em');
+        t3.style.color = "transparent";
+    }
+    else if(currentTime ==1){
+        currentTime++;
+        t1.style.color = "#8e0202";
+        t2.setAttribute('style', 'color: transparent; -webkit-text-stroke-width: 3.4px; -webkit-text-stroke-color: #8e0202; font-size:7.5em');
+        t2.style.color = "transparent";
+        t3.setAttribute('style', 'color: transparent; -webkit-text-stroke-width: 3.4px; -webkit-text-stroke-color: #8e0202; font-size:7.5em');
+        t3.style.color = "transparent";
+    }
+    else if(currentTime ==2){
+        currentTime++;
+        t1.style.color = "#8e0202";
+        t2.style.color = "#8e0202";
+        t3.setAttribute('style', 'color: transparent; -webkit-text-stroke-width: 3.4px; -webkit-text-stroke-color: #8e0202; font-size:7.5em');
+        t3.style.color = "transparent";
+    }else{
+        currentTime=0;
+        t1.style.color = "#8e0202";
+        t2.style.color = "#8e0202";
+        t3.style.color = "#8e0202";
+    }
+}, 200*timeInterval);
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+    
+  var getMax = function(){
+    return $(document).height() - $(window).height();
+  }
+    
+  var getValue = function(){
+    return $(window).scrollTop();
+  }
+    
+  if ('max' in document.createElement('progress')) {
+    // Browser supports progress element
+    var progressBar = $('progress');
+        
+    // Set the Max attr for the first time
+    progressBar.attr({ max: getMax() });
+
+    $(document).on('scroll', function(){
+      // On scroll only Value attr needs to be calculated
+      progressBar.attr({ value: getValue() });
+    });
+      
+    $(window).resize(function(){
+      // On resize, both Max/Value attr needs to be calculated
+      progressBar.attr({ max: getMax(), value: getValue() });
+    }); 
+  
+  } else {
+
+    var progressBar = $('.progress-bar'), 
+        max = getMax(), 
+        value, width;
+        
+    var getWidth = function() {
+      // Calculate width in percentage
+      value = getValue();            
+      width = (value/max) * 100;
+      width = width + '%';
+      return width;
+    }
+        
+    var setWidth = function(){
+      progressBar.css({ width: getWidth() });
+    }
+        
+    $(document).on('scroll', setWidth);
+    $(window).on('resize', function(){
+      // Need to reset the Max attr
+      max = getMax();
+      setWidth();
+    });
+  }
+});
+</script>
+
+<h1>Testando imagem</h1>
+</br>
+<h1>Testando imagem</h1>
+</br>
+<h1>Testando imagem</h1>
+</br>
+<h1>Testando imagem</h1>
+</br>
+<h1>Testando imagem</h1>
+</br>
+<h1>Testando imagem</h1>
+</br>
+<h1>Testando imagem</h1>
+</br>
+<h1>Testando imagem</h1>
+</br>
+<h1>Testando imagem</h1>
+</br>
+<h1>Testando imagem</h1>
+</br>
+<h1>Testando imagem</h1>
+</br>
+<h1>Testando imagem</h1>
+</br>
+<h1>Testando imagem</h1>
+</br>
+<h1>Testando imagem</h1>
+</br>
+<h1>Testando imagem</h1>
+</br>
+<h1>Testando imagem</h1>
+</br>
+<h1>Testando imagem</h1>
+</br>
+</body>

@@ -1,0 +1,160 @@
+body{
+	background-color: #d1d7e3 !important;
+	font-family: 'Montserrat', sans-serif;
+}
+img.perfil {
+    /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+    filter: gray; /* IE5+ */
+    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+    -webkit-transition: all .2s ease-in-out; 
+}
+
+img.perfil:hover {
+    filter: none;
+    -webkit-filter: grayscale(0.2);
+    -webkit-transform: scale(1.01);
+
+}
+.fundo
+{
+    background-image: url('cover.jpg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    bottom: 0;
+    color: black;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    height: 41em;
+    right: 0;
+    text-align: center;
+    top: 0;
+    background-size: cover;
+}
+.imagem{
+	margin-top: 4%;
+}
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+progress {
+  /* Positioning */
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  /* Dimensions */
+  width: 100%;
+  height: .25em;
+
+  /* Reset the apperance */  
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  /* Get rid of the default border in Firefox/Opera. */
+  border: none;
+
+  /* For Firefox/IE10+ */
+  background-color: transparent;
+
+  /* For IE10+, color of the progress bar */
+  color: #8e0202;
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+.flat::-webkit-progress-value {
+  background-color: #8e0202;
+}
+
+.flat::-moz-progress-bar {
+  background-color: #8e0202;
+}
+
+.progress-container {
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: .25em;
+  display: block;
+}
+
+.progress-bar {
+  height: 5px;
+  background:  #8e0202 !important;
+  width: 0%;
+  transition: width .10s ease !important;
+}
+.texto-principal{
+	margin-top: 1%;
+}
+.texto{
+	margin-bottom: 7%;
+	margin-top: 7%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.titulo{
+	text-decoration-color: #000000 !important; 
+	font-size: 6em;
+	font-weight: bolder;
+	text-align-last: right;
+}
+.titulo:hover{
+	text-shadow: -0.04em -0.04em #8e0202;
+}
+.linha:hover{
+	background-image: url('linha.png');
+    background-repeat: no-repeat;
+    background-size:90%;
+    float: bottom !important;
+}
+@-webkit-keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; } 
+}
+@-moz-keyframes fadeIn {
+	0% { opacity: 0;}
+	100% { opacity: 1; }
+}
+@-o-keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+.fadeIn {
+	-webkit-animation: fadeIn 1.3s ease-in-out;
+	-moz-animation: fadeIn 1.3s ease-in-out;
+	-o-animation: fadeIn 1.3s ease-in-out;
+	animation: fadeIn 1.3s ease-in-out;
+}
+.paragrafo{
+	font-size: 1.4em;
+}
+.apresentacao{
+	margin-top: 5%;
+}
+.footer
+{
+    background-color: #8e0202;
+    background-size:90%;
+    bottom: 0;
+    color: black;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    height: 39em;
+    right: 0;
+    text-align: center;
+    top: 0;
+    background-size: cover;
+}
